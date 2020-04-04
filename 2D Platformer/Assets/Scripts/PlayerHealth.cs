@@ -44,8 +44,9 @@ public class PlayerHealth : MonoBehaviour
             currentHealth--;
             if(currentHealth <= 0)
             {
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
                 currentHealth = 0;
+                LevelManager.instance.RespawnPlayer();
             }else
             {
                 invincibleCounter = invincibleLength;
