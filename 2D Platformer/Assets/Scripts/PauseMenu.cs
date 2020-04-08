@@ -37,11 +37,14 @@ public class PauseMenu : MonoBehaviour
             isPaused = false;
             pauseScreen.SetActive(false);
             Time.timeScale = 1f;
+            AudioManager.instance.bgMusic.SetActive(true);
         }else
         {
+
             isPaused = true;
             pauseScreen.SetActive(true);
             Time.timeScale = 0f;
+            AudioManager.instance.bgMusic.SetActive(false);
         }
     }
 
@@ -53,6 +56,7 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        Debug.Log("Click");
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
     }

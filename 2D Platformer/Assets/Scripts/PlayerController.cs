@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private float knockbackCounter;
     private bool isHit;
     public float bounceForce;
+    public bool stopInput;
     private void Awake()
     {
         instance = this;
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!PauseMenu.instance.isPaused)
+        if(!PauseMenu.instance.isPaused && !stopInput)
         {
             if(knockbackCounter <= 0)
             {
@@ -46,6 +47,14 @@ public class PlayerController : MonoBehaviour
                 if (onGround)
                 {
                     canDoubleJump = true;
+                    if(Input.GetKeyDown("s"))
+                    {
+                        anim.SetTrigger("crouch");
+                    } 
+                    else
+                    {
+                        anim.SetTrigger("stand");
+                    }
                 }
 
                 if (Input.GetButtonDown("Jump"))
