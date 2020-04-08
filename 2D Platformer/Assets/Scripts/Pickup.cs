@@ -30,6 +30,7 @@ public class Pickup : MonoBehaviour
                 isCollected = true;
                 Destroy(gameObject);
                 Instantiate(pickupEffect, transform.position, transform.rotation);
+                AudioManager.instance.PlaySoundEffects(6);
                 UIController.instance.UpdateGemCount();
             }
 
@@ -41,6 +42,7 @@ public class Pickup : MonoBehaviour
                     isCollected = true;
                     Destroy(gameObject);
                     Instantiate(pickupEffect, transform.position, transform.rotation);
+                    AudioManager.instance.PlaySoundEffects(7);
 
                 }
             }

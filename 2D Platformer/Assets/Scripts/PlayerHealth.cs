@@ -54,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
                 invincibleCounter = invincibleLength;
                 SpriteRenderer.color = new Color(SpriteRenderer.color.r, SpriteRenderer.color.g, SpriteRenderer.color.b, .55f);
                 PlayerController.instance.knockBack();
+                AudioManager.instance.PlaySoundEffects(9);
             }
 
             UIController.instance.updateHealthDisplay();

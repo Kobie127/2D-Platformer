@@ -34,6 +34,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator RespawnCo()
     {
         PlayerController.instance.gameObject.SetActive(false);
+        AudioManager.instance.PlaySoundEffects(8);
         yield return new WaitForSeconds(waitToRespawn);
         PlayerController.instance.gameObject.SetActive(true);
         PlayerController.instance.transform.position = CheckpointController.instance.spawnPoint;
