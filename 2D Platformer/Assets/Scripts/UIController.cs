@@ -15,6 +15,8 @@ public class UIController : MonoBehaviour
     public bool shouldFadeToBlack;
     public bool shouldFadeFromBlack;
     public GameObject levelCompleteText;
+    public GameObject levelInfoPanel;
+    public Text levelName;
     private void Awake()
     {
         instance = this;
@@ -112,4 +114,6 @@ public class UIController : MonoBehaviour
         shouldFadeToBlack = false;
         shouldFadeFromBlack = true;
     }
+
+   
 }

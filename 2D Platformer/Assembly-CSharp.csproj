@@ -62,7 +62,12 @@
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\LevelEnd.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\LevelSelctUI.cs" />
+     <Compile Include="Assets\Scripts\LevelSelectCamera.cs" />
+     <Compile Include="Assets\Scripts\LevelSelectMananger.cs" />
+     <Compile Include="Assets\Scripts\LevelSelectPlayer.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MapPoint.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />

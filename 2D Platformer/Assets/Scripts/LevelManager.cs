@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     public int gemsCollected;
     public string nextLevel;
+    public float timeInLevel;
 
     private void Awake()
     {
@@ -20,12 +21,14 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
        //AudioManager.instance.levelVic.SetActive(false);
+       timeInLevel = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         // AudioManager.instance.PlayBackgroundMusic(13);
+        timeInLevel += Time.deltaTime;
     }
 
     public void RespawnPlayer()
@@ -66,6 +69,29 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.moveSpeed = 0;
         UIController.instance.FadeToBlack();
         yield return new WaitForSeconds((1f / UIController.instance.fadeSpeed) + 1.60f);
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
+        PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
+        if(PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_gems"))
+        {
+            if(gemsCollected > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_gems"))
+            {
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", gemsCollected);
+            }
+        }else
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", gemsCollected);
+        }
+
+        if(PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_time"))
+        {
+            if(timeInLevel < PlayerPrefs.GetFloat(SceneManager.GetActiveScene().name + "_time"))
+            {
+                PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + "_time", timeInLevel);
+            }
+        }else
+        {
+            PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + "_time", timeInLevel);
+        }
         SceneManager.LoadScene(nextLevel);
     }
 
