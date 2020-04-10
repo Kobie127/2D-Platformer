@@ -6,9 +6,6 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public AudioSource[] soundEffects;
-    public AudioSource backgroundMusic;
-    public AudioSource endMusic;
-    public AudioSource titleMusic;
     public GameObject bgMusic;
     public GameObject levelVic;
     
@@ -20,20 +17,13 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ResumeMusic(backgroundMusic);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(PauseMenu.instance.isPaused)
-      {
-          backgroundMusic.Pause();
-      }
-      else
-      {
-        backgroundMusic.Play();
-      }   
+  
     }
 
     public void PlaySoundEffects(int soundToPlay)

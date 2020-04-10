@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\LevelSelectPlayer.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MapPoint.cs" />
+     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PauseMenuLS.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />

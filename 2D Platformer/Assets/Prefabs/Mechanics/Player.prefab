@@ -143,7 +143,11 @@ MonoBehaviour:
   groundCheckPoint: {fileID: 8456614395906885455}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
+  knockbackLength: 0
+  knockbackForce: 0
+  bounceForce: 0
+  stopInput: 0
 --- !u!95 &8456614395350492916
 Animator:
   serializedVersion: 3
@@ -177,6 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 3
+  invincibleLength: 0
+  deathEffect: {fileID: 0}
 --- !u!1 &8456614395906885454
 GameObject:
   m_ObjectHideFlags: 0
