@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public string mainMenu;
     public GameObject pauseScreen;
     public bool isPaused;
+    public GameObject LSmusic;
 
     private void Awake()
     {
@@ -46,6 +47,25 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0f;
             AudioManager.instance.bgMusic.SetActive(false);
         }
+    }
+
+    public void PauseUnpauseLS()
+    {
+        if(isPaused)
+        {
+            isPaused = false;
+            pauseScreen.SetActive(false);
+            Time.timeScale = 1f;
+            LSmusic.SetActive(true);
+        }else
+        {
+
+            isPaused = true;
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0f;
+            LSmusic.SetActive(false);
+        }
+
     }
 
     public void LevelSelect()
