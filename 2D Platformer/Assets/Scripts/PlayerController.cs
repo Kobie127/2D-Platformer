@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private bool isHit;
     public float bounceForce;
     public bool stopInput;
+    public GameObject stompbox;
+    public float stompboxLength;
     private void Awake()
     {
         instance = this;
@@ -37,8 +39,9 @@ public class PlayerController : MonoBehaviour
     {
         if(!PauseMenu.instance.isPaused && !stopInput)
         {
-            if(knockbackCounter <= 0)
+            if(knockbackCounter <= 0 && knockbackCounter <= 0)
             {
+                stompbox.SetActive(true);
                 //This sets the velocity to the players rigid body and will calculate the speed based on the moveSpeed variable and the raw input as soon as a left or right key is pressed
                 RB.velocity = new Vector2(moveSpeed * Input.GetAxisRaw("Horizontal"), RB.velocity.y);
                 //This grabs the information from a empty game object known as the ground point and stores it's data into this variable for later use
@@ -91,6 +94,8 @@ public class PlayerController : MonoBehaviour
                 }
             }else
             {
+                stompbox.SetActive(false);
+                stompboxLength -= Time.deltaTime;
                 knockbackCounter -= Time.deltaTime;
                 if(!SR.flipX)
                 {

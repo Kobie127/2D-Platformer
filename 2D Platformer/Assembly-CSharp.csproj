@@ -54,10 +54,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Bouncer.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\CheckpointController.cs" />
      <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
+     <Compile Include="Assets\Scripts\EagleController.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\LevelEnd.cs" />
@@ -74,7 +76,9 @@
      <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Slammer.cs" />
      <Compile Include="Assets\Scripts\Stomping.cs" />
+     <Compile Include="Assets\Scripts\Switch.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\giveDamage.cs" />
      <None Include="Assets\2D Platformer Assets\Graphics\Credits.txt" />
