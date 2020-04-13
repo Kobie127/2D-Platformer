@@ -10,6 +10,7 @@ public class LevelSelectPlayer : MonoBehaviour
     public bool levelLoad;
     public LevelSelectMananger mananger;
     public GameObject LSmusic;
+    
 
 
     private void Awake()

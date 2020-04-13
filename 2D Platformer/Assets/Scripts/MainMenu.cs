@@ -8,6 +8,13 @@ public class MainMenu : MonoBehaviour
     public string startScene;
     public string continueScene;
     public GameObject continueButton;
+    public GameObject continueB;
+    public GameObject startB;
+    public GameObject quitB;
+    public GameObject controlB;
+    public GameObject controls;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,5 +47,26 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void Controls()
+    {
+        continueB.SetActive(false);
+        startB.SetActive(false);
+        quitB.SetActive(false);
+        controlB.SetActive(false);
+        controls.SetActive(true);
+       
+
+    }
+
+    public void Back()
+    {
+        continueB.SetActive(true);
+        startB.SetActive(true);
+        quitB.SetActive(true);
+        controlB.SetActive(true);
+        controls.SetActive(false);
+       
     }
 }
