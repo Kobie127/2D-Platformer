@@ -23,6 +23,7 @@ public class Bouncer : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            AudioManager.instance.PlaySoundEffects(10);
             PlayerController.instance.RB.velocity = new Vector2(PlayerController.instance.RB.velocity.x, bounceForce);
             anim.SetTrigger("Bounce");
         }

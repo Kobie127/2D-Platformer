@@ -43,6 +43,7 @@ public class BossTankController : MonoBehaviour
     private bool isDefeated;
     public float shotSpeedUp;
     public float mineSpeedUp;
+    public float moveSpeedUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -146,6 +147,7 @@ public class BossTankController : MonoBehaviour
         {
             timeBetweenShots /= shotSpeedUp;
             timeBetweenMines /= mineSpeedUp;
+            moveSpeed *= moveSpeedUp;
         }
         
     }
