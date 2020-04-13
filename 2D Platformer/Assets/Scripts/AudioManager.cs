@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] soundEffects;
     public GameObject bgMusic;
     public GameObject levelVic;
+    public AudioSource bossMusic;
     
 
     private void Awake()
@@ -60,6 +61,17 @@ public class AudioManager : MonoBehaviour
         backgroundMusic.Play();
     }
 
+    public void PlayBossMusic()
+    {
+        bgMusic.SetActive(false);
+        bossMusic.Play();
+    }
+
+    public void StopBossMusic()
+    {
+        bossMusic.Stop();
+        bgMusic.SetActive(true);
+    }
     
 
 

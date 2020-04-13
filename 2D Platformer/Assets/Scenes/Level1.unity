@@ -17614,6 +17614,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &694328862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8861696388026437716, guid: ea3f0596fdee0ae4995bb8279292b0f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2050439839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &798243702
 GameObject:
   m_ObjectHideFlags: 0
@@ -18579,6 +18585,11 @@ PrefabInstance:
       propertyPath: maxHeight
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1126177074222335810, guid: ea3f0596fdee0ae4995bb8279292b0f2,
+        type: 3}
+      propertyPath: stompbox
+      value: 
+      objectReference: {fileID: 694328862}
     - target: {fileID: 6578080032294649857, guid: ea3f0596fdee0ae4995bb8279292b0f2,
         type: 3}
       propertyPath: m_RootOrder

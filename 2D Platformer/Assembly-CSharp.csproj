@@ -54,6 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\BossActivator.cs" />
+     <Compile Include="Assets\Scripts\BossBulletController.cs" />
+     <Compile Include="Assets\Scripts\BossTankController.cs" />
+     <Compile Include="Assets\Scripts\BossTankHitBox.cs" />
+     <Compile Include="Assets\Scripts\BossTankMineController.cs" />
      <Compile Include="Assets\Scripts\Bouncer.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Checkpoint.cs" />
@@ -80,6 +85,7 @@
      <Compile Include="Assets\Scripts\Stomping.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
+     <Compile Include="Assets\Scripts\VictoryScreen.cs" />
      <Compile Include="Assets\Scripts\giveDamage.cs" />
      <None Include="Assets\2D Platformer Assets\Graphics\Credits.txt" />
  <Reference Include="Unity.Timeline.Editor">
